@@ -127,3 +127,57 @@ function secondCanvas(){
   ctx.closePath()
 }
 secondCanvas()
+
+
+function thirdCanvas(){
+  const canvas = document.querySelector(".third2 canvas")
+  const third2 = document.querySelector(".third2").getBoundingClientRect()
+  const thirdNav = document.querySelector(".thirdnav").getBoundingClientRect()
+  canvas.style.height = `${third2.height+thirdNav.height}px`
+  canvas.style.width = `${third2.width}px`
+  canvas.style.top = `-${thirdNav.height}px`
+  canvas.width = third2.width
+  canvas.height = third2.height + thirdNav.height
+  
+  const ctx = canvas.getContext("2d")
+  const points =[
+    {x:0,y:0},
+    {x:third2.width-thirdNav.width-20,y:0},
+    {x:third2.width-thirdNav.width-10,y:thirdNav.height-10},
+    {x:third2.width-thirdNav.width,y:thirdNav.height},
+    {x:third2.width,y:thirdNav.height},
+    {x:third2.width,y:canvas.height},
+    {x:0,y:canvas.height}
+
+  ]
+  const image = new Image()
+  image.src = "images/Casa interior HD 8K papel de parede Imagem fotográfica _ imagem Premium gerada com IA 1.svg"
+
+
+ 
+  image.onload = () =>{
+       ctx.beginPath()
+  ctx.moveTo(0,0)
+  drawRoundedShape(points,30,ctx)
+  ctx.clip()
+      console.log(image.height,image.width)
+      const scale = Math.max(canvas.height/image.height,canvas.width/image.width)
+      const newWidth = image.width * scale
+      const newHeight = image.height * scale
+    ctx.save()
+    ctx.translate(newWidth/2,newHeight/2)
+    ctx.drawImage(image,-newWidth/2,-newHeight/2,newWidth,newHeight)
+    ctx.restore()
+      ctx.closePath()
+    ctx.beginPath()
+      ctx.moveTo(0,0)
+  drawRoundedShape(points,30,ctx)
+  ctx.clip()
+  ctx.fillStyle = "#00000042"
+  ctx.rect(0,0,canvas.width,canvas.height)
+  ctx.fill()
+  ctx.closePath()
+  }
+
+}
+thirdCanvas()

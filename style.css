@@ -326,3 +326,203 @@
     border: none;
     background-color: #ECFFEB;
 }
+.third{
+    padding: 1rem;
+    position: relative;
+}
+.third::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #0D0D0D;
+    content: "";
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+}
+.third > div{
+    z-index: 3;
+        border: 2px solid  #ecffeb23;
+    border-radius: 2rem;
+    background: #ffffff13;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #ECFFEB;
+    box-shadow: 0 8px 32px #00000040;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.third > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+.third header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ecffeb23;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.third header > p{
+    font-size: 2rem;
+    font-family: "FC Barcelona",sans-serif;
+    font-weight: 700;
+}
+.third header nav{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+.third header a{
+    text-decoration: none;
+    color: #ECFFEB;
+}
+.third header button{
+    background-color: #ECFFEB;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #030363;
+}
+.thirdnav{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-self: flex-end;
+    padding-bottom: 1rem;
+
+}
+.thirdnav a{
+    color: #ECFFEB;
+    background-color: #ecffeb23;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 2rem;
+}
+.third2{
+    padding: 3rem 2rem 7rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+}
+.third2 canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.third2 button{
+        background-color: #ECFFEB;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #030363;
+}
+.third2 h1{
+       font-family: "Archivo",sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+}
+.third3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+.third31{
+    width: 45vw;
+    height: 15vw;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 1.5rem;
+        background-color: #ffb1990e;
+}
+.third3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.third31 > div{
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.third31 > div:last-of-type{
+    padding: 1rem;
+}
+.third31 button{
+    background-color: transparent;
+    border: 1px solid #ECFFEB;
+    padding: 0.5rem 1.3rem;
+    border-radius: 1.5rem;
+    color: #ECFFEB;
+}
+.third31 h3,.third32 h3{
+    font-family: "Archivo",sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.third31 a{
+    text-decoration: none;
+    color: #ECFFEB;
+}
+.third32,.third33{
+    height: 15vw;
+    width: 18vw;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    position: relative;
+}
+.third32{
+    padding: 1rem;
+            background-color: #ffb1990e;
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+
+}
+.third32 p{
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+.third32 > div:last-of-type{
+    overflow: hidden;
+    border-radius: 0.5rem;
+    
+}
+.third33::before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #0d0d0d50;
+}
+.third33 p{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.5rem;
+
+}
